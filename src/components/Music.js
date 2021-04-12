@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from './Button';
+import Like from './Like';
 
 const Music = () => {
   const [music, setMusic] = useState([
@@ -11,6 +12,7 @@ const Music = () => {
   const renderMusic = () => {
     return music.map(m =>
       <div className="card col-sm">
+        <Like />
         <img src={m.img} className="card-img-top" alt="Album Cover"/>
         <div className="card-body">
           <h5 className="card-title">{m.song}</h5>
