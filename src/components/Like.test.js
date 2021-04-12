@@ -8,7 +8,7 @@ describe('Like', () => {
   })
 
   test('renders in a button for liking', () => {
-    let likeButton = screen.getByRole('switch');
+    const likeButton = screen.getByRole('switch');
     expect(likeButton).toBeInTheDocument();
   })
 
