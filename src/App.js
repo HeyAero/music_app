@@ -4,7 +4,7 @@ import Music from './components/Music';
 
 function App() {
   return (
-    <main>
+    <main className="container">
       <Intro />
       <Music />
     </main>
