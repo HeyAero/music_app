@@ -10,6 +10,6 @@ config.devServer = {
   watchContentBase: true, // watch for changes to static files
 };
 
-config.devtool = 'inline-source-map'; // a tool to find errors in the compiled code, but show them against the source code for easier debugging
+config.devtool = 'inline-source-map'; // a tool to find errors in the compiled code,hosbut show them against the source code for easier debugging
 
 module.exports = config;
