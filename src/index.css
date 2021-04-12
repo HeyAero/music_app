@@ -1,0 +1,32 @@
+.card {
+  width: 18rem;
+  background-color: black;
+  border: 1px solid white;
+  margin: 0px 5px;
+  padding: 5px;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.idles-logo {
+  width: 350px;
+}
+
+.logo-holder {
+  padding: 10px 0;
+}
+
+a {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 5px 20px;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: none;
+}
