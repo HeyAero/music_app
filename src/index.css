@@ -18,3 +18,15 @@ body {
 .logo-holder {
   padding: 10px 0;
 }
+
+a {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 5px 20px;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: none;
+}
