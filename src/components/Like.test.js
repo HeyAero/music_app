@@ -19,4 +19,12 @@ describe('Like', () => {
     let newColor = likeButton.style.color;
     expect(newColor).not.toBe(initColor);
   })
+
+  test('check that class name changes when liked', () => {
+    let likeButton = screen.getByRole('switch');
+    let initClass = likeButton.className;
+    userEvent.click(likeButton);
+    let newClass = likeButton.className;
+    expect(newClass).not.toBe(initClass);
+  })
 });
