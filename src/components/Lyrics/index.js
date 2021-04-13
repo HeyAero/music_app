@@ -12,17 +12,19 @@ const Lyrics = ({title, close}) => {
         let lyricsArray = data.lyrics.split('\n').filter(line => line != "");
 
         let i = 0;
+        console.log(i);
         displayLyrics = setInterval(() => {
           if (lyricsArray[i]) {
             let lyric = lyricsArray[i];
             setSingleLyric(lyric);
+            i++;
           } else {
             i = 0;
           }
-          i++;
         }, 5000)
       } catch(err) {
         console.warn(err);
+        setSingleLyric('No lyrics found.');
       }
     }
     fetchLyrics();
