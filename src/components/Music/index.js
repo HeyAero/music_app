@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
-import { Button, Like } from '../';
+import { Button, Like, Lyrics } from '../';
 
 const Music = ({music}) => {
-  const renderMusic = () => {
-    return music.map(m =>
-      <div key={m.id} className="card col-sm">
-        <Like />
-        <img src={m.img} className="card-img-top" alt="Album Cover"/>
-        <div className="card-body">
-          <h5 className="card-title">{m.song}</h5>
-          <p className="card-text">{m.album}</p>
-          <Button name={m.song} href={m.link}/>
-        </div>
-      </div>
-    );
-  }
+
+  const [showLyrics, setShowLyrics] = useState(false);
+
+  const toggleLyrics = () => setShowLyrics(prevState => !prevState);
 
   return (
-    <div className="row justify-content-center">
-      { renderMusic() }
+    <div className="card col-sm">
+      <Like />
+      <img src={music.img} className="card-img-top" alt="Album Cover"/>
+      <div className="card-body">
+        <h5 className="card-title">{music.song}</h5>
+        <p className="card-text">{music.album}</p>
+        <Button name={music.song} href={music.link}/>
+        {
+          showLyrics ? <Lyrics title={music.song} close={toggleLyrics} />
+          : <div className="text-center mt-3"><a href="#" onClick={toggleLyrics}>Show me the lyrics!</a></div>
+        }
+      </div>
     </div>
   );
 }
