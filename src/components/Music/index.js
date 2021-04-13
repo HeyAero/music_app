@@ -2,10 +2,17 @@ import React, { useState } from 'react';
 import { Button, Like } from '../';
 
 const Music = ({music}) => {
+  const [liked, setLiked] = useState(false);
+
+  const handleLike = (e) => {
+    e.stopPropagation();
+    setLiked(!liked);
+  }
+
   const renderMusic = () => {
     return music.map(m =>
       <div className="card col-sm">
-        <Like />
+        <Like handleLike={handleLike} liked={liked} />
         <img src={m.img} className="card-img-top" alt="Album Cover"/>
         <div className="card-body">
           <h5 className="card-title">{m.song}</h5>
