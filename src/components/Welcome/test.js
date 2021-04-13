@@ -13,6 +13,7 @@ describe('Welcome', () => {
 });
 
 describe('Welcome Alt', () => {
+
   beforeEach(() => {
     let name = "Aaron";
     render(<Welcome name={name}/>);
@@ -22,4 +23,5 @@ describe('Welcome Alt', () => {
     const name = screen.getByRole('heading', {id: 'welcome'});
     expect(name.textContent).toBe("Here are some of our songs, Aaron:");
   })
+
 });

@@ -23,7 +23,7 @@ const Homepage = () => {
   }
 
   return (
-    <main className="container">
+    <main aria-label="main" className="container">
       <Intro />
       <Welcome name={name} nameInput={nameInput} handleInput={handleInput} handleFormSubmit={handleFormSubmit} />
       <Music music={music} />
