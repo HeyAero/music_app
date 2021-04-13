@@ -22,11 +22,19 @@ const Homepage = () => {
     setNameInput('');
   }
 
+  const renderMusic = () => {
+    return music.map(m =>
+      <Music music={m} key={m.id}/>
+    );
+  }
+
   return (
     <main aria-label="main" className="container">
       <Intro />
       <Welcome name={name} nameInput={nameInput} handleInput={handleInput} handleFormSubmit={handleFormSubmit} />
-      <Music music={music} />
+      <div className="row justify-content-center">
+        { renderMusic() }
+      </div>
     </main>
   )
 }
