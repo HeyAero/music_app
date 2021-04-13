@@ -1,15 +1,11 @@
 import React from 'react';
-import Intro from './components/Intro';
-import Music from './components/Music';
-import Welcome from './components/Welcome';
+import { Homepage } from './pages';
 
 function App() {
   return (
-    <main className="container">
-      <Intro />
-      <Welcome />
-      <Music />
-    </main>
+    <>
+      <Homepage />
+    </>
   );
 }
 

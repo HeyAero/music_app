@@ -1,6 +1,6 @@
 import { screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Welcome from './Welcome';
+import Welcome from '.';
 
 describe('Welcome', () => {
   beforeEach(() => {

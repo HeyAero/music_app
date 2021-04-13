@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Button from './Button';
-import Like from './Like';
+import { Button, Like } from '../';
 
 const Music = () => {
   const [music, setMusic] = useState([
