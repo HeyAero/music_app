@@ -9,10 +9,23 @@ const Homepage = () => {
     { id: 3, song: "GROUNDS", album: "Ultra Mono", img: "https://f4.bcbits.com/img/a3789051601_10.jpg", link: "https://www.idlesband.com/uk/"}
   ])
 
+  const [name, setName] = useState("stranger");
+  const [nameInput, setNameInput] = useState('');
+
+  const handleInput = (e) => {
+    setNameInput(e.target.value);
+  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setName(nameInput);
+    setNameInput('');
+  }
+
   return (
     <main className="container">
       <Intro />
-      <Welcome />
+      <Welcome name={name} nameInput={nameInput} handleInput={handleInput} handleFormSubmit={handleFormSubmit} />
       <Music music={music} />
     </main>
   )

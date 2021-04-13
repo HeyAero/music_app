@@ -1,18 +1,6 @@
 import React, { useState } from 'react';
 
-const Welcome = () => {
-  const [name, setName] = useState("stranger");
-  const [nameInput, setNameInput] = useState('');
-
-  const handleInput = (e) => {
-    setNameInput(e.target.value);
-  }
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setName(nameInput);
-    setNameInput('');
-  }
+const Welcome = ({name, nameInput, handleInput, handleFormSubmit}) => {
 
   return (
     <>
