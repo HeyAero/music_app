@@ -1,5 +1,4 @@
-import { screen, within } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
 import Welcome from '.';
 
 describe('Welcome', () => {
@@ -11,12 +10,16 @@ describe('Welcome', () => {
     const name = screen.getByRole('heading', {id: 'welcome'});
     expect(name.textContent).toBe("Here are some of our songs, stranger:");
   })
+});
 
-  test('does not change the name when a user enters input', () => {
-    const nameInput = screen.getByLabelText('Let us know your name:')
-    userEvent.type(nameInput, "Aaron");
+describe('Welcome Alt', () => {
+  beforeEach(() => {
+    let name = "Aaron";
+    render(<Welcome name={name}/>);
+  })
+
+  test('sets current name to be Aaron', () => {
     const name = screen.getByRole('heading', {id: 'welcome'});
-    expect(name.textContent).toBe("Here are some of our songs, stranger:");
-    expect(nameInput.value).toBe("Aaron");
+    expect(name.textContent).toBe("Here are some of our songs, Aaron:");
   })
 });
