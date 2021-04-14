@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import { Homepage, About } from './pages';
+import { Homepage, About, NotFound } from './pages';
 import { Header, Footer } from './layout';
 
 function App() {
@@ -14,6 +14,9 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/*">
+          <NotFound />
         </Route>
       </Switch>
       <Footer/>
