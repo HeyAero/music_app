@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
-    <div>
+    <main aria-label="main" className="container">
       <h1>404 - Not Found!</h1>
       <Link to="/">
         Go Home
       </Link>
-    </div>
+    </main>
   );
 }
 
